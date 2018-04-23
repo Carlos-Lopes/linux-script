@@ -36,10 +36,17 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 sudo apt-get install -y spotify-client
 
-# Numix Circle Theme
+# Numix Theme
 sudo add-apt-repository ppa:numix/ppa
 sudo apt-get update
 sudo apt-get install numix-icon-theme-circle
+
+cd /tmp
+git clone https://github.com/zagortenay333/numix-cinnamon.git
+mv numix-cinnamon/Numix-Cinnamon ~/.themes
+rm -rf ~/tmp/numix-cinnamon
+
+cd ~/Downloads
 
 # Node JS
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
